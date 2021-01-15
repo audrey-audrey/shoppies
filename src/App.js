@@ -1,7 +1,13 @@
+// Packages
 import React, { useState } from 'react'
-import './App.css';
+import axios from 'axios';
+
+// Components
 import MovieListItem from './components/MovieListItem';
 import SearchForm from './components/SearchForm'
+
+// Styling
+import './App.css';
 
 function App() {
   const [currentMovie, setCurrentMovie] = useState("")
