@@ -1,5 +1,5 @@
 import React from 'react'
-// import SearchForm from './SearchForm'
+import Button from "./Button";
 
 export default function MovieListItem(props) {
   const { search, results } = props
@@ -11,7 +11,7 @@ export default function MovieListItem(props) {
       {
         results && results.map((result) => {
           return (
-            <h5>{result.Title} ({result.Year})</h5>
+            <h5>{result.Title} ({result.Year}) <Button confirm>Nominate</Button></h5>
           )
         })
       }
