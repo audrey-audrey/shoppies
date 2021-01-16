@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
 
 export default function SearchForm(props) {
-  const {updateMovie} = props
-  const [movie, setMovie] = useState("")
+  const {updateSearch} = props
+  const [search, setSearch] = useState("")
 
   const handleChange = (event) => {
     const valueTyped = event.target.value
 
     if (valueTyped) {
-      setMovie(valueTyped)
+      setSearch(valueTyped)
     }
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    updateMovie(movie)
+    updateSearch(search)
   }
 
   return (

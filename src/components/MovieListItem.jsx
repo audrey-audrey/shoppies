@@ -1,6 +1,18 @@
 import React from 'react'
+// import SearchForm from './SearchForm'
 
 export default function MovieListItem(props) {
+  const { search, results } = props
 
-  return <h1 className="movie-list-item">This is the movie you searched: </h1>
+  return (
+    <ul>
+      {
+        results && results.map((result) => {
+          return (
+            <h5>{result.Title}</h5>
+          )
+        })
+      }
+    </ul>
+  )
 }

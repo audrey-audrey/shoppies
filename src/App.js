@@ -9,28 +9,33 @@ import SearchForm from './components/SearchForm'
 // Styling
 import './App.css';
 
+// API key
+const API_KEY = process.env.REACT_APP_API_KEY
+
 function App() {
-  let [currentSearch, setCurrentSearch] = useState("rambo")
+  let [currentSearch, setCurrentSearch] = useState("")
   let [currentResult, setCurrentResult] = useState("")
 
   const updateSearch = search => setCurrentSearch(search)
 
-  const API_KEY = process.env.REACT_APP_API_KEY
 
   useEffect(() => {
     console.log("Starting API call ")
     axios
       .get(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${currentSearch}&type=movie`)
       .then(res => {
-        console.log(res.data)
-        setCurrentResult(res.data.Search)})
-  }, [])
+        setCurrentResult(res.data.Search)
+      })
+  }, [currentSearch])
 
 
   return (
     <div className="App">
-      <SearchForm {...{ updateSearch}} />
-      <MovieListItem />
+      <SearchForm {...{ updateSearch }} />
+      <MovieListItem
+        search={currentSearch}
+        results={currentResult}
+      />
     </div>
   );
 }
