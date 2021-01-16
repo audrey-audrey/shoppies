@@ -3,21 +3,23 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
 // Components
-import Header from './components/Header'
+import Nav from './components/Nav'
 import SearchForm from './components/SearchForm'
 import MovieListItem from './components/MovieListItem';
 import NominationListItem from './components/NominationListItem';
+import Notification from './components/Notification';
 
 // Styling
-import './App.css';
+import './App.scss';
 
 // API key
 const API_KEY = process.env.REACT_APP_API_KEY
 
 function App() {
   let [currentSearch, setCurrentSearch] = useState("")
-  let [currentResult, setCurrentResult] = useState("")
+  let [currentResult, setCurrentResult] = useState([])
   let [nominations, setNominations] =useState([])
+  const [showNotification, setShowNotification] = useState(false);
 
   const updateSearch = search => setCurrentSearch(search)
   const updateNominations = nominee => setNominations([...nominations, nominee])
@@ -28,6 +30,10 @@ function App() {
     setNominations(newList)
   }
 
+  const closeModal = () => {
+    setShowNotification(false);
+  };
+
   useEffect(() => {
     console.log("Starting API call ")
     axios
@@ -37,11 +43,18 @@ function App() {
       })
   }, [currentSearch])
 
+  useEffect(() => {
+    if (nominations.length === 5) {
+      setShowNotification(true);
+    }
+  }, [nominations]);
 
   return (
     <div className="App">
-      <Header title="The Shoppies"/>
+      <Nav title="The Shoppies"/>
+      {showNotification ? <Notification closeModal={closeModal} /> : null}
       <SearchForm {...{ updateSearch }} />
+      <div class="movie-nom-container">
       <MovieListItem
         search={currentSearch}
         results={currentResult}
@@ -52,6 +65,7 @@ function App() {
         nominations={nominations}
         {...{ removeNomination }}
       />
+      </div>
     </div>
   );
 }

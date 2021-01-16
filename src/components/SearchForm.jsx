@@ -18,14 +18,16 @@ export default function SearchForm(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="movie"
-        placeholder="Enter movie name"
-        onChange={handleChange}
-      />
-      <button type="submit">Find the movie!</button>
-    </form>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="movie"
+          placeholder="Enter movie name"
+          onChange={handleChange}
+        />
+        <button type="submit">Find the movie!</button>
+      </form>
+    </div>
   )
 }

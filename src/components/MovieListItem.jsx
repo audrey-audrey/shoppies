@@ -16,7 +16,7 @@ export default function MovieListItem(props) {
   };
 
   return (
-    <>
+    <div>
       {search && <h2>These are the search results for: {search}</h2>}
       <ul>
         {
@@ -31,6 +31,6 @@ export default function MovieListItem(props) {
           })
         }
       </ul>
-    </>
+    </div>
   )
 }

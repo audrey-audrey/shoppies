@@ -5,7 +5,7 @@ export default function NominationListItem(props) {
   const { nominations, removeNomination } = props
 
   return (
-    <>
+    <div>
       <h2>These are your nominations: </h2>
       <ul>
         {
@@ -17,6 +17,6 @@ export default function NominationListItem(props) {
           })
         }
       </ul>
-    </>
+    </div>
   )
 }
