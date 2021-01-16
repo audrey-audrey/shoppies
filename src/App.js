@@ -39,6 +39,7 @@ function App() {
       <MovieListItem
         search={currentSearch}
         results={currentResult}
+        nominations={nominations}
         {...{ updateNominations }}
       />
       <NominationListItem 

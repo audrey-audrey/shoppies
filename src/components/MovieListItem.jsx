@@ -1,9 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Button from "./Button";
 
 export default function MovieListItem(props) {
-  const { search, results, updateNominations } = props
+  const { search, results, nominations, updateNominations } = props
   // let [buttonClass, setButtonClass] = useState("confirm")
+
+  const isNominated = function (result) {
+    // if result is a nominee
+    const nominee = nominations.some(nomination => nomination.imdbID === result)
+    if (!nominee) return false;
+    return true;
+  };
 
   return (
     <>
@@ -13,8 +20,8 @@ export default function MovieListItem(props) {
           results && results.map((result) => {
             return (
               <h5>{result.Title} ({result.Year})
-                <Button confirm onClick={() => {
-                  updateNominations({ Title: result.Title, Year: result.Year })
+                <Button confirm disabled={isNominated(result.imdbID)} onClick={() => {
+                  updateNominations({ imdbID: result.imdbID, Title: result.Title, Year: result.Year })
                 }
                 }>Nominate</Button></h5>
             )
