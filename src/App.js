@@ -21,6 +21,12 @@ function App() {
 
   const updateSearch = search => setCurrentSearch(search)
   const updateNominations = nominee => setNominations([...nominations, nominee])
+  
+  const removeNomination = function(imdbID) {
+    const newList = nominations.filter((nomination) => nomination.imdbID !== imdbID)
+
+    setNominations(newList)
+  }
 
   useEffect(() => {
     console.log("Starting API call ")
@@ -44,6 +50,7 @@ function App() {
       />
       <NominationListItem 
         nominations={nominations}
+        {...{ removeNomination }}
       />
     </div>
   );

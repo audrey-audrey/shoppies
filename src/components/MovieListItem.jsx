@@ -6,12 +6,12 @@ export default function MovieListItem(props) {
   // let [buttonClass, setButtonClass] = useState("confirm")
 
   const isNominated = function (result) {
+    // if nominations reaches 5
+    if (nominations.length === 5) return true;
     // if result is a nominee
     const nominee = nominations.some(nomination => nomination.imdbID === result)
     if (!nominee) return false;
 
-    // if nominations reaches 5
-    if (nominations.length === 5) return true;
     return true;
   };
 

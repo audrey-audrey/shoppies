@@ -2,7 +2,7 @@ import React from 'react'
 import Button from "./Button";
 
 export default function NominationListItem(props) {
-  const {nominations} = props
+  const { nominations, removeNomination } = props
 
   return (
     <>
@@ -12,7 +12,7 @@ export default function NominationListItem(props) {
           nominations && nominations.map((nomination) => {
             return (
               <h5>{nomination.Title} ({nomination.Year})
-                <Button danger>Remove</Button></h5>
+                <Button danger onClick={() => removeNomination(nomination.imdbID)}>Remove</Button></h5>
             )
           })
         }
