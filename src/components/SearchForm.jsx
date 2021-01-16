@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export default function SearchForm(props) {
-  const {updateSearch} = props
+  const { updateSearch } = props
   const [search, setSearch] = useState("")
 
   const handleChange = (event) => {
@@ -19,7 +19,12 @@ export default function SearchForm(props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" name="movie" placeholder="Enter movie name" onChange={handleChange}/>
+      <input
+        type="text"
+        name="movie"
+        placeholder="Enter movie name"
+        onChange={handleChange}
+      />
       <button type="submit">Find the movie!</button>
     </form>
   )

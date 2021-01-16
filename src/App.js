@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
 // Components
+import Header from './components/Header'
 import SearchForm from './components/SearchForm'
 import MovieListItem from './components/MovieListItem';
 import NominationListItem from './components/NominationListItem';
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header title="The Shoppies"/>
       <SearchForm {...{ updateSearch }} />
       <MovieListItem
         search={currentSearch}

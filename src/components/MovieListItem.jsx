@@ -1,12 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from "./Button";
 
 export default function MovieListItem(props) {
   const { search, results, updateNominations } = props
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault()
-  // }
+  // let [buttonClass, setButtonClass] = useState("confirm")
 
   return (
     <>
@@ -16,7 +13,10 @@ export default function MovieListItem(props) {
           results && results.map((result) => {
             return (
               <h5>{result.Title} ({result.Year})
-                <Button confirm onClick={() => updateNominations({Title: result.Title, Year: result.Year})}>Nominate</Button></h5>
+                <Button confirm onClick={() => {
+                  updateNominations({ Title: result.Title, Year: result.Year })
+                }
+                }>Nominate</Button></h5>
             )
           })
         }
