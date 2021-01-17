@@ -6,7 +6,7 @@ Shoppies is a webpage that can search OMDB for movies, and allow the user to sav
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Click here to see a [live demo!](https://audrey-shoppies.herokuapp.com/)
+Click here to see a [live demo!](https://audrey-shoppies.netlify.app/)
 
 ## Final Product 
 Adding nominations! 
