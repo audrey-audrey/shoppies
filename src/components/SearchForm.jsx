@@ -4,9 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import "../styles/SearchForm.scss";
+import NominationListItem from './NominationListItem';
 
 export default function SearchForm(props) {
-  const { updateSearch } = props
+  const { updateSearch, nominations } = props
   const [search, setSearch] = useState("")
 
   const handleChange = (event) => {
@@ -30,7 +31,7 @@ export default function SearchForm(props) {
           name="movie"
           placeholder="Enter movie name"
           onChange={handleChange}
-          class="search-box"
+          className="search-box"
         />
         <Button search type="submit"><FontAwesomeIcon icon={faSearch} /></Button>
       </form>

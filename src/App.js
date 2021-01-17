@@ -51,9 +51,9 @@ function App() {
 
   return (
     <div className="App">
-      <Nav title="The Shoppies" />
+      <Nav />
       {showNotification ? <Notification closeModal={closeModal} /> : null}
-      <SearchForm {...{ updateSearch }} />
+      <SearchForm {...{ updateSearch }} nominations={nominations}/>
       <div class="movie-nom-container">
 
         <main className="container">

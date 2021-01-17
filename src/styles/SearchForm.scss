@@ -1,7 +1,16 @@
 @import "./variables.scss";
 
+// .none {
+//   height: 100vh;
+//   display: flex;  
+//   align-items: center;
+//   justify-content: center;
+// }
+
 .search-box{
-  width: 30rem;
+
+
+  width: 40rem;
   border-radius: 1rem;
   border: 0;
   font-size: 1.5rem;
@@ -14,5 +23,6 @@
   color: black;
   background-color: $white;
   outline: none;
-  text-align: center;
+  // text-align: center;
 }
+
