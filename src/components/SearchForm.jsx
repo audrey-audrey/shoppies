@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Button from "./Button";
 
 export default function SearchForm(props) {
   const { updateSearch } = props
@@ -26,7 +27,7 @@ export default function SearchForm(props) {
           placeholder="Enter movie name"
           onChange={handleChange}
         />
-        <button type="submit">Find the movie!</button>
+        <Button confirm type="submit">Search</Button>
       </form>
     </div>
   )

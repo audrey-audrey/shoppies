@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  .movie-nom-container {
+    display: flex;
+    flex-direction: row;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      margin-top: 40px;
+      justify-content: space-between;
+  
+      .cards {
+        display: -webkit-box;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+
+}

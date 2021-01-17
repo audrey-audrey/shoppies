@@ -3,7 +3,7 @@ import Button from "./Button";
 
 export default function MovieListItem(props) {
   const { search, results, nominations, updateNominations } = props
-  // let [buttonClass, setButtonClass] = useState("confirm")
+  // let [buttonclassName, setButtonclassName] = useState("confirm")
 
   const isNominated = function (result) {
     // if nominations reaches 5
@@ -16,21 +16,32 @@ export default function MovieListItem(props) {
   };
 
   return (
-    <div>
+    <div className="container-fluid d-flex justify-content-center">
+      <div className="row">
       {search && <h2>These are the search results for: {search}</h2>}
-      <ul>
-        {
-          results && results.map((result) => {
-            return (
-              <h5>{result.Title} ({result.Year})
-                <Button confirm disabled={isNominated(result.imdbID)} onClick={() => {
-                  updateNominations({ imdbID: result.imdbID, Title: result.Title, Year: result.Year })
-                }
-                }>Nominate</Button></h5>
-            )
-          })
-        }
-      </ul>
+      {
+        results && results.map((result) => {
+          return (
+            <div className="card text-center" key={result.imdbID}>
+              <div className="overflow">
+                <img src={result.Poster} alt={result.Title} />
+                <div className="card__content">
+                  <div className="card__title">{result.Title} ({result.Year})</div>
+                </div>
+                <Button
+                  confirm
+                  disabled={isNominated(result.imdbID)}
+                  onClick={() => updateNominations({ imdbID: result.imdbID, Title: result.Title, Year: result.Year })
+                  }>
+                  Nominate
+                    </Button>
+              </div>
+            </div>
+          )
+        })
+      }
+      </div>
+
     </div>
   )
 }

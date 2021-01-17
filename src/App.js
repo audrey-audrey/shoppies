@@ -10,7 +10,7 @@ import NominationListItem from './components/NominationListItem';
 import Notification from './components/Notification';
 
 // Styling
-import './App.scss';
+import './styles/App.scss';
 
 // API key
 const API_KEY = process.env.REACT_APP_API_KEY
@@ -18,13 +18,13 @@ const API_KEY = process.env.REACT_APP_API_KEY
 function App() {
   let [currentSearch, setCurrentSearch] = useState("")
   let [currentResult, setCurrentResult] = useState([])
-  let [nominations, setNominations] =useState([])
+  let [nominations, setNominations] = useState([])
   const [showNotification, setShowNotification] = useState(false);
 
   const updateSearch = search => setCurrentSearch(search)
   const updateNominations = nominee => setNominations([...nominations, nominee])
-  
-  const removeNomination = function(imdbID) {
+
+  const removeNomination = function (imdbID) {
     const newList = nominations.filter((nomination) => nomination.imdbID !== imdbID)
 
     setNominations(newList)
@@ -51,20 +51,26 @@ function App() {
 
   return (
     <div className="App">
-      <Nav title="The Shoppies"/>
+      <Nav title="The Shoppies" />
       {showNotification ? <Notification closeModal={closeModal} /> : null}
       <SearchForm {...{ updateSearch }} />
       <div class="movie-nom-container">
-      <MovieListItem
-        search={currentSearch}
-        results={currentResult}
-        nominations={nominations}
-        {...{ updateNominations }}
-      />
-      <NominationListItem 
-        nominations={nominations}
-        {...{ removeNomination }}
-      />
+
+        <main className="container">
+          <ul className="cards">
+            <MovieListItem
+              search={currentSearch}
+              results={currentResult}
+              nominations={nominations}
+              {...{ updateNominations }}
+            />
+            <NominationListItem
+              nominations={nominations}
+              {...{ removeNomination }}
+            />
+          </ul>
+        </main>
+
       </div>
     </div>
   );
