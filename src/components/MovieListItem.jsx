@@ -18,8 +18,8 @@ export default function MovieListItem(props) {
   };
 
   return (
-    <div className="container-fluid d-flex justify-content-center">
-      {search && <h2>Search results for: {search}</h2>}
+    <div className="container-fluid d-flex justify-content-center movielist">
+      {search && <h2 className="resultMessage">Search results for:&nbsp;<b>{search}</b></h2>}
       <div className="row">
         {
           results && results.map((result) => {

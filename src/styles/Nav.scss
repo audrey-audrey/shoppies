@@ -1,15 +1,19 @@
-  .navigation-bar {
-   .header{
-     display: flex;
-     flex-direction: row;
-     align-items: center;
-     justify-content: center;
+@import "./variables.scss";
 
-     img {
-       margin-top: 5rem;
-       margin-bottom: 4rem;
-       height: 8rem;
-     }
-   }
+.navigation-bar {
+  background-color: $dark-background;
+
+  .header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      margin-top: 5rem;
+      margin-bottom: 4rem;
+      height: 9rem;
+    }
+  }
 }
 

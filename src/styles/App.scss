@@ -2,7 +2,6 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  background: #112963;
 
   .movie-nom-container {
     display: flex;
@@ -11,7 +10,8 @@
     .container {
       display: flex;
       flex-direction: row;
-      margin-top: 40px;
+      margin: 0;
+      padding: 0;
       justify-content: space-between;
   
       .cards {
