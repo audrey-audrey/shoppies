@@ -10,7 +10,7 @@ Click here to see a live demo!
 
 ## Final Product 
 Adding nominations! 
-!["Adding Nominations"](https://github.com/audrey-audrey/tweeter/blob/master/documents/demo.gif)
+!["Adding Nominations"](https://github.com/audrey-audrey/shoppies/blob/main/documents/demo.gif)
 
 Removing nominations! 
-!["Adding Nominations"](https://github.com/audrey-audrey/tweeter/blob/master/documents/remove.gif)
+!["Adding Nominations"](https://github.com/audrey-audrey/shoppies/blob/main/documents/remove.gif)
