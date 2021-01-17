@@ -8,6 +8,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Click here to see a [live demo!](https://audrey-shoppies.netlify.app/)
 
+# Future Improvements 
+- Animations for loading, adding/deleting movies
+- Saving nominations lists to session
+- Display multiple pages 
+- Filter to search movies (by release year, ratings, etc)
+- Responsive design
+
 ## Final Product 
 Adding nominations! 
 !["Adding Nominations"](https://github.com/audrey-audrey/shoppies/blob/main/documents/demo-add.gif)
