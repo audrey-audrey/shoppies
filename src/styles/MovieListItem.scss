@@ -1,0 +1,27 @@
+.container-fluid{
+  display: flex;
+  flex-direction: column;
+}
+
+.card{
+  width: 10rem;
+  margin: 1rem;
+}
+
+.card:hover {
+  box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.253)!important;
+}
+
+.card-body {
+  padding: 2rem 0 !important;
+}
+
+.card__title{
+  font-size: .9rem;
+  padding: 0.5rem;
+  height: 4rem;
+}
+
+.card-img {
+  height: 14rem;
+}

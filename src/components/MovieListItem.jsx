@@ -1,6 +1,8 @@
 import React from 'react'
 import Button from "./Button";
 
+import "../styles/MovieListItem.scss";
+
 export default function MovieListItem(props) {
   const { search, results, nominations, updateNominations } = props
   // let [buttonclassName, setButtonclassName] = useState("confirm")
@@ -17,31 +19,30 @@ export default function MovieListItem(props) {
 
   return (
     <div className="container-fluid d-flex justify-content-center">
-      <div className="row">
       {search && <h2>These are the search results for: {search}</h2>}
-      {
-        results && results.map((result) => {
-          return (
-            <div className="card text-center" key={result.imdbID}>
-              <div className="overflow">
-                <img src={result.Poster} alt={result.Title} />
-                <div className="card__content">
-                  <div className="card__title">{result.Title} ({result.Year})</div>
-                </div>
-                <Button
-                  confirm
-                  disabled={isNominated(result.imdbID)}
-                  onClick={() => updateNominations({ imdbID: result.imdbID, Title: result.Title, Year: result.Year })
-                  }>
-                  Nominate
+      <div className="row">
+        {
+          results && results.map((result) => {
+            return (
+              <div className="card text-center" key={result.imdbID}>
+                <div className="overflow">
+                  <img src={result.Poster} alt={result.Title} className="card-img" />
+                  <div className="card__content">
+                    <div className="card__title">{result.Title} ({result.Year})</div>
+                  </div>
+                  <Button
+                    confirm
+                    disabled={isNominated(result.imdbID)}
+                    onClick={() => updateNominations({ imdbID: result.imdbID, Title: result.Title, Year: result.Year })
+                    }>
+                    Nominate
                     </Button>
+                </div>
               </div>
-            </div>
-          )
-        })
-      }
+            )
+          })
+        }
       </div>
-
     </div>
   )
 }
