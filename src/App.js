@@ -13,7 +13,7 @@ import Notification from './components/Notification';
 import './styles/App.scss';
 
 // API key
-const API_KEY = process.env.REACT_APP_API_KEY
+const API_KEY = "8389a82e";
 
 function App() {
   let [currentSearch, setCurrentSearch] = useState("")
