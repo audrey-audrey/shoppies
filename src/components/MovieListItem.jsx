@@ -27,7 +27,7 @@ export default function MovieListItem(props) {
               <div className="card text-center" key={result.imdbID}>
                 <div className="overflow">
                   <img src={result.Poster} alt={result.Title} className="card-img" />
-                  <div className="card__content">
+                  <div className="card__content descriptions">
                     <div className="card__title">{result.Title} ({result.Year})</div>
                   </div>
                   <div className="btn">
