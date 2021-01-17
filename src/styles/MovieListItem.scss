@@ -1,6 +1,16 @@
 .container-fluid{
   display: flex;
   flex-direction: column;
+
+  h2{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: center;
 }
 
 .card{
@@ -19,9 +29,10 @@
 .card__title{
   font-size: .9rem;
   padding: 0.5rem;
-  height: 4rem;
+  height: 3.5rem;
 }
 
 .card-img {
   height: 14rem;
 }
+

@@ -30,13 +30,15 @@ export default function MovieListItem(props) {
                   <div className="card__content">
                     <div className="card__title">{result.Title} ({result.Year})</div>
                   </div>
-                  <Button
-                    confirm
-                    disabled={isNominated(result.imdbID)}
-                    onClick={() => updateNominations({ imdbID: result.imdbID, Title: result.Title, Year: result.Year })
-                    }>
-                    Nominate
+                  <div className="btn">
+                    <Button
+                      confirm
+                      disabled={isNominated(result.imdbID)}
+                      onClick={() => updateNominations({ imdbID: result.imdbID, Title: result.Title, Year: result.Year, Poster: result.Poster})
+                      }>
+                      Nominate
                     </Button>
+                  </div>
                 </div>
               </div>
             )
