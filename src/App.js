@@ -14,6 +14,7 @@ import './styles/App.scss';
 
 // API key
 const API_KEY = process.env.REACT_APP_API_KEY;
+console.log(API_KEY)
 
 function App() {
   let [currentSearch, setCurrentSearch] = useState("")
@@ -37,7 +38,7 @@ function App() {
   useEffect(() => {
     console.log("Starting API call ")
     axios
-      .get(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${currentSearch}&type=movie`)
+      .get(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${currentSearch}&type=movie`)
       .then(res => {
         setCurrentResult(res.data.Search)
       })
