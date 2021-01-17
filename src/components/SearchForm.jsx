@@ -3,6 +3,8 @@ import Button from "./Button";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
+import "../styles/SearchForm.scss";
+
 export default function SearchForm(props) {
   const { updateSearch } = props
   const [search, setSearch] = useState("")
@@ -28,6 +30,7 @@ export default function SearchForm(props) {
           name="movie"
           placeholder="Enter movie name"
           onChange={handleChange}
+          class="search-box"
         />
         <Button search type="submit"><FontAwesomeIcon icon={faSearch} /></Button>
       </form>

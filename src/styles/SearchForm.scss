@@ -1,8 +1,18 @@
-.active-pink-4 input[type="text"]:focus:not([readonly]) {
-  border: 1px solid #f48fb1;
-  box-shadow: 0 0 0 1px #f48fb1;
-}
-.active-pink-3 input[type="text"] {
-  border: 1px solid #f48fb1;
-  box-shadow: 0 0 0 1px #f48fb1;
+@import "./variables.scss";
+
+.search-box{
+  width: 30rem;
+  border-radius: 1rem;
+  border: 0;
+  font-size: 1.5rem;
+  height: 2.5rem;
+  line-height: 2rem;
+  // margin-right: 1rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $search-color;
+  color: black;
+  background-color: $white;
+  outline: none;
+  text-align: center;
 }
