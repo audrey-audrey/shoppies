@@ -26,7 +26,10 @@ export default function MovieListItem(props) {
             return (
               <div className="card text-center" key={result.imdbID}>
                 <div className="overflow">
-                  <img src={result.Poster} alt={result.Title} className="card-img" />
+                  <img
+                    src={result.Poster}
+                    onError={(e) => { e.target.onerror = null; e.target.src = "no-poster.png" }}
+                    className="card-img" />
                   <div className="card__content descriptions">
                     <div className="card__title">{result.Title} ({result.Year})</div>
                   </div>
@@ -34,7 +37,7 @@ export default function MovieListItem(props) {
                     <Button
                       confirm
                       disabled={isNominated(result.imdbID)}
-                      onClick={() => updateNominations({ imdbID: result.imdbID, Title: result.Title, Year: result.Year, Poster: result.Poster})
+                      onClick={() => updateNominations({ imdbID: result.imdbID, Title: result.Title, Year: result.Year, Poster: result.Poster })
                       }>
                       Nominate
                     </Button>

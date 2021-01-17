@@ -6,9 +6,11 @@ import "../styles/MovieListItem.scss";
 export default function NominationListItem(props) {
   const { nominations, removeNomination } = props
 
+  const nomMessage = `${nominations.length === 0 ?  'Add movies to your nominations!' : 'Here are your nominees: '}`
+
   return (
     <div className="container-fluid d-flex justify-content-center">
-      {nominations.length > 0 && <h2>Here are your nominees: </h2>}
+      <h2>{nomMessage}</h2>
       <div className="row">
         {
           nominations && nominations.map((nomination) => {
@@ -16,7 +18,7 @@ export default function NominationListItem(props) {
               <div className="card text-center" key={nomination.imdbID}>
                 <div className="overflow">
                   <img src={nomination.Poster} alt={nomination.Title} className="card-img" />
-                  <div className="card__content">
+                  <div className="card__content descriptions">
                     <div className="card__title">{nomination.Title} ({nomination.Year})</div>
                   </div>
                   <div className="btn">

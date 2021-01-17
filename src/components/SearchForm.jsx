@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Button from "./Button";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 export default function SearchForm(props) {
   const { updateSearch } = props
@@ -27,7 +29,7 @@ export default function SearchForm(props) {
           placeholder="Enter movie name"
           onChange={handleChange}
         />
-        <Button confirm type="submit">Search</Button>
+        <Button search type="submit"><FontAwesomeIcon icon={faSearch} /></Button>
       </form>
     </div>
   )

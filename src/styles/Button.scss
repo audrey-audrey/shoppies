@@ -36,6 +36,15 @@
   background-color: transparent;
 }
 
+.button--search {
+  color: $search-color;
+  border-color: $search-color;
+  background-color: transparent;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-left: 0.25rem;
+}
+
 .button--danger:hover {
   color: $white;
   background-color: $danger-color;
@@ -44,6 +53,11 @@
 .button--confirm:hover {
   color: $white;
   background-color: $confirm-color;
+}
+
+.button--search:hover {
+  color: $white;
+  background-color: $search-color;
 }
 
 .button:last-of-type {

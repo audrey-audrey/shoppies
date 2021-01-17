@@ -6,9 +6,9 @@ const Nav = (props) => {
     <div className="navigation-bar">
     <nav className="header">
     <img src="movie-icon.png" alt="Welcome!"/>
-      <div className="logo">
-        <span>{props.title}</span>
-      </div>
+      <h1 className="logo">
+        {props.title}
+      </h1>
     </nav>
   </div>
   )
