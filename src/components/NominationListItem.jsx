@@ -6,7 +6,7 @@ import "../styles/MovieListItem.scss";
 export default function NominationListItem(props) {
   const { nominations, removeNomination } = props
 
-  const nomMessage = `${nominations.length === 0 ?  'Add movies to your nominations!' : 'Here are your nominees: '}`
+  const nomMessage = `${nominations.length === 0 ? 'Add movies to your nominations!' : 'Here are your nominees: '}`
 
   return (
     <div className="container-fluid d-flex justify-content-center nomlist">
@@ -17,7 +17,11 @@ export default function NominationListItem(props) {
             return (
               <div className="card text-center" key={nomination.imdbID}>
                 <div className="overflow">
-                  <img src={nomination.Poster} alt={nomination.Title} className="card-img" />
+                  <img
+                    src={nomination.Poster}
+                    onError={(e) => { e.target.onerror = null; e.target.src = "no-poster.png" }}
+                    alt={nomination.Title}
+                    className="card-img" />
                   <div className="card__content descriptions">
                     <div className="card__title">{nomination.Title} ({nomination.Year})</div>
                   </div>

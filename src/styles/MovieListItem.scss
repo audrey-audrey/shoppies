@@ -57,9 +57,9 @@
     height: 14rem;
   }
   
-  .card img{
-    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
-  }
+  // .card img{
+  //   transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+  // }
   
   .descriptions{
     position: absolute;
@@ -68,21 +68,21 @@
     height:83%;
     width:100%;
     background-color: rgba(255,255,255,0.9);
-    transition: all .7s ease-in-out;
+    transition: all .2s ease-in-out;
     padding: 20px;
     box-sizing: border-box;
     clip-path: circle(0% at 100% 100%);
   }
   .card:hover .descriptions{
     left:0px;
-    transition: all .7s ease-in-out;
+    transition: all .2s ease-in-out;
     clip-path: circle(75%);
   }
-  .card:hover{
-    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
-    box-shadow: 0px 2px 3px rgba(0,0,0,.3);
-    transform: scale(.97);
-  }
+  // .card:hover{
+  //   transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+  //   box-shadow: 0px 2px 3px rgba(0,0,0,.3);
+  //   transform: scale(.97);
+  // }
   
   .card h1{
     color: #ff3838;
