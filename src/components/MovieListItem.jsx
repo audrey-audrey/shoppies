@@ -39,7 +39,7 @@ export default function MovieListItem(props) {
                       disabled={isNominated(result.imdbID)}
                       onClick={() => updateNominations({ imdbID: result.imdbID, Title: result.Title, Year: result.Year, Poster: result.Poster })
                       }>
-                      Nominate
+                      {isNominated(result.imdbID) ? "Nominated" : "Nominate"}
                     </Button>
                   </div>
                 </div>

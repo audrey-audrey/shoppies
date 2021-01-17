@@ -1,9 +1,12 @@
 @import "./mixins.scss";
 @import "./variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bodoni+Moda&display=swap');
 
 .button {
   border-radius: 1rem;
   border: 0;
+  font-family: "Abel";
+  font-weight: 700;
   font-size: 1.5rem;
   height: 2rem;
   line-height: 1.2rem;
@@ -37,9 +40,9 @@
 }
 
 .button--search {
-  color: $search-color;
+  color: $white;
   border-color: $search-color;
-  background-color: white;
+  background-color: $search-color;
   height: 2.5rem;
   width: 2.5rem;
   margin-left: 0.25rem;
@@ -56,8 +59,8 @@
 }
 
 .button--search:hover {
-  color: $white;
-  background-color: $search-color;
+  color: $search-color;
+  background-color: $white;
 }
 
 .button:last-of-type {
@@ -70,8 +73,8 @@
 
 .button:disabled {
   border-style: solid;
-  border-color: $black;
-  color: $black;
-  background-color: transparent;
-  opacity: 0.7;
+  border-color: $confirm-color;
+  color: $white;
+  background-color: $confirm-color;
+  // opacity: 0.7;
 }

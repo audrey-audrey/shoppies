@@ -25,13 +25,13 @@ export default function SearchForm(props) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="search-container">
         <input
+          className="search-box"
           type="text"
           name="movie"
           placeholder="Enter movie name"
           onChange={handleChange}
-          className="search-box"
         />
         <Button search type="submit"><FontAwesomeIcon icon={faSearch} /></Button>
       </form>

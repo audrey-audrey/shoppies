@@ -1,28 +1,29 @@
 @import "./variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bodoni+Moda&display=swap');
 
-// .none {
-//   height: 100vh;
-//   display: flex;  
-//   align-items: center;
-//   justify-content: center;
-// }
+.search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
-.search-box{
-
-
-  width: 40rem;
-  border-radius: 1rem;
-  border: 0;
-  font-size: 1.5rem;
-  height: 2.5rem;
-  line-height: 2rem;
-  // margin-right: 1rem;
-  border-width: 2px;
-  border-style: solid;
-  border-color: $search-color;
-  color: black;
-  background-color: $white;
-  outline: none;
-  // text-align: center;
+  .search-box {
+    display: flex;
+    width: 45rem;
+    border-radius: 1rem;
+    border: 0;
+    font-size: 1.2rem;
+    font-family: 'Abel';
+    font-weight: 600;
+    padding-left: 0.7rem;
+    height: 2.5rem;
+    line-height: 2rem;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $search-color;
+    color: black;
+    background-color: $white;
+    outline: none;
+  }
 }
+
 
