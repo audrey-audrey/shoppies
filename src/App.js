@@ -56,7 +56,7 @@ function App() {
       <SearchForm {...{ updateSearch }} />
       <div class="movie-nom-container">
 
-        <main className="container">
+        <main className="containers">
           <ul className="cards">
             <MovieListItem
               search={currentSearch}

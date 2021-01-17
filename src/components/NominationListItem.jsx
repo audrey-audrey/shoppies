@@ -9,7 +9,7 @@ export default function NominationListItem(props) {
   const nomMessage = `${nominations.length === 0 ? 'Add movies to your nominations!' : 'Here are your nominees: '}`
 
   return (
-    <div className="container-fluid d-flex justify-content-center nomlist">
+    <div className="containers-fluid d-flex justify-content-center nomlist">
       <h2 className="nomMessage">{nomMessage}</h2>
       <div className="row">
         {
