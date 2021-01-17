@@ -37,7 +37,7 @@ function App() {
   useEffect(() => {
     console.log("Starting API call ")
     axios
-      .get(`http://www.omdbapi.com/?apikey=8389a82e&s=${currentSearch}&type=movie`)
+      .get(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${currentSearch}&type=movie`)
       .then(res => {
         setCurrentResult(res.data.Search)
       })
