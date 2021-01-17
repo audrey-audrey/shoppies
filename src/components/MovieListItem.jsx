@@ -5,7 +5,6 @@ import "../styles/MovieListItem.scss";
 
 export default function MovieListItem(props) {
   const { search, results, nominations, updateNominations } = props
-  // let [buttonclassName, setButtonclassName] = useState("confirm")
 
   const isNominated = function (result) {
     // if nominations reaches 5
@@ -28,7 +27,8 @@ export default function MovieListItem(props) {
                 <div className="overflow">
                   <img
                     src={result.Poster}
-                    onError={(e) => { e.target.onerror = null; e.target.src = "no-poster.png" }}
+                    onError={(e) => { e.target.onerror = null; e.target.src = "no-poster.png"}}
+                    alt={result.Title}
                     className="card-img" />
                   <div className="card__content descriptions">
                     <div className="card__title">{result.Title} ({result.Year})</div>
@@ -39,7 +39,7 @@ export default function MovieListItem(props) {
                       disabled={isNominated(result.imdbID)}
                       onClick={() => updateNominations({ imdbID: result.imdbID, Title: result.Title, Year: result.Year, Poster: result.Poster })
                       }>
-                      {isNominated(result.imdbID) ? "Nominated" : "Nominate"}
+                      Nominate
                     </Button>
                   </div>
                 </div>

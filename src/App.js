@@ -53,7 +53,7 @@ function App() {
     <div className="App">
       <Nav />
       {showNotification ? <Notification closeModal={closeModal} /> : null}
-      <SearchForm {...{ updateSearch }} nominations={nominations}/>
+      <SearchForm {...{ updateSearch }} />
       <div class="movie-nom-container">
 
         <main className="container">

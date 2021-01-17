@@ -20,15 +20,18 @@ const StyledContent = styled.div`
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  border-radius: 2px;
+  border-radius: 15px;
+  border-color: #9BC9F5;
+  border-width: thick;
   width: 40%;
   height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  font-family: 'Poiret One', cursive;
-  font-size: 20px;
+  font-family: 'Bodoni';
+  font-weight: 800;
+  font-size: 25px;
   @media (max-width: 750px) {
     width: 80%;
     margin: 50% auto;
