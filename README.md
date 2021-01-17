@@ -10,7 +10,7 @@ Click here to see a [live demo!](https://audrey-shoppies.herokuapp.com/)
 
 ## Final Product 
 Adding nominations! 
-!["Adding Nominations"](https://github.com/audrey-audrey/shoppies/blob/main/documents/demo.gif)
+!["Adding Nominations"](https://github.com/audrey-audrey/shoppies/blob/main/documents/demo-add.gif)
 
 Removing nominations! 
-!["Adding Nominations"](https://github.com/audrey-audrey/shoppies/blob/main/documents/remove.gif)
+!["Adding Nominations"](https://github.com/audrey-audrey/shoppies/blob/main/documents/demo-remove.gif)
